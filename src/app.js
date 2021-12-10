@@ -7,4 +7,10 @@ app.get('/ping', (req, res) => {
   res.status(200).send();
 });
 
+app.get('/home', (req, res) => {
+  res.status(200).send(
+    '<h1>Hello world!</h>'
+  )
+});
+
 module.exports = app;
