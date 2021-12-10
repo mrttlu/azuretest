@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'mrtnodetest'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F15DEE2BD79D42DCA29E542603DA53DE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AEBF33CA30354D5F9606D43039C0BA0F }}
           package: .
