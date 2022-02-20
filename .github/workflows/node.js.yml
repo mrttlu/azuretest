@@ -36,7 +36,7 @@ jobs:
         host: ${{secrets.DO_IP_ADDRESS}}
         username: ${{secrets.DO_USERNAME}}
         script: |
-          cd nodetest
+          cd azuretest
           git pull
           docker stop testApp
           docker rm testApp
