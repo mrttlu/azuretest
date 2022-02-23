@@ -20,15 +20,15 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+    # - uses: actions/checkout@v2
+    # - name: Use Node.js ${{ matrix.node-version }}
+    #  uses: actions/setup-node@v2
+    #  with:
+    #    node-version: ${{ matrix.node-version }}
+    #   cache: 'npm'
+    # - run: npm ci
+    # - run: npm run build --if-present
+    # - run: npm test
     - name: Deploy
       uses: appleboy/ssh-action@v0.1.2
       with:
@@ -38,7 +38,6 @@ jobs:
         script: |
           cd azuretest
           git pull
-          docker stop testApp
-          docker rm testApp
-          docker build . -t mrt/testapp
-          docker run --name testApp -p 4000:4000 -d mrt/testapp
+          docker-compose build
+          docker-compose stop
+          docker-compose up -d
