@@ -1,2 +1,0 @@
-# azuretest
-Testing azure deployment
