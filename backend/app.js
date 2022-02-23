@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const version = require('./package.json');
 
 const app = express();
 app.use(cors());
@@ -12,6 +13,7 @@ app.get('/info', (req, res) => {
     author: 'Mrt',
     type: 'info',
     url: 'http://localhost:4000/info',
+    version: version.version,
   });
 });
 

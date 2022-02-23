@@ -1,6 +1,6 @@
 {
   "name": "azuretest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Testing azure deployment",
   "main": "index.js",
   "scripts": {

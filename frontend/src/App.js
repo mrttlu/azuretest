@@ -18,6 +18,7 @@ function App() {
     <>
       <h1>API name: {info.name}</h1>
       <p>Author: {info.author}</p>
+      <p>Basckend version: {info.version}</p>
     </>
   );
 }
